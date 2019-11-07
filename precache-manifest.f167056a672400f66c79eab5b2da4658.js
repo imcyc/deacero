@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "434a82153428dcc6de0200a5b67fea49",
+    "revision": "4878f031f27d0c930f37f85fd22b4bca",
     "url": "/deacero/index.html"
   },
   {
-    "revision": "779fcd32161d359297f6",
+    "revision": "ee20b2a7366b66326394",
     "url": "/deacero/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "3ab1b8d446ae69dfd45d",
-    "url": "/deacero/static/css/main.83317bd8.chunk.css"
+    "revision": "6494fad16fae3659be3b",
+    "url": "/deacero/static/css/main.0ad64263.chunk.css"
   },
   {
-    "revision": "779fcd32161d359297f6",
-    "url": "/deacero/static/js/2.fe55d126.chunk.js"
+    "revision": "ee20b2a7366b66326394",
+    "url": "/deacero/static/js/2.d009785b.chunk.js"
   },
   {
-    "revision": "3ab1b8d446ae69dfd45d",
-    "url": "/deacero/static/js/main.9e1471d9.chunk.js"
+    "revision": "6494fad16fae3659be3b",
+    "url": "/deacero/static/js/main.d3a3fa72.chunk.js"
   },
   {
     "revision": "50628452974f635f1911",
