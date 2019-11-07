@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/deacero/static/css/main.b100e6da.chunk.css",
+    "main.js": "/deacero/static/js/main.269afcb3.chunk.js",
+    "main.js.map": "/deacero/static/js/main.269afcb3.chunk.js.map",
+    "runtime-main.js": "/deacero/static/js/runtime-main.fdf8e765.js",
+    "runtime-main.js.map": "/deacero/static/js/runtime-main.fdf8e765.js.map",
+    "static/js/2.966882bb.chunk.js": "/deacero/static/js/2.966882bb.chunk.js",
+    "static/js/2.966882bb.chunk.js.map": "/deacero/static/js/2.966882bb.chunk.js.map",
+    "index.html": "/deacero/index.html",
+    "precache-manifest.a88b341d05d2ac36aabb20c32beebf61.js": "/deacero/precache-manifest.a88b341d05d2ac36aabb20c32beebf61.js",
+    "service-worker.js": "/deacero/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/deacero/static/css/main.b100e6da.chunk.css.map",
+    "static/media/logo.svg": "/deacero/static/media/logo.25bf045c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fdf8e765.js",
+    "static/js/2.966882bb.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.269afcb3.chunk.js"
+  ]
+}
