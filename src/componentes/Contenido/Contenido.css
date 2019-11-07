@@ -1,0 +1,71 @@
+.wrap-contenido {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.wrap-contenido section {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.wrap-contenido .column {
+  margin: 0;
+  padding: 10px;
+  width: 50%;
+}
+
+.wrap-contenido .column.opciones {
+  background: #ff2e00 !important;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap-contenido .column.resultados {
+  background: #111111 !important;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap-contenido .column.opciones .titulo {
+  flex-direction: column;
+}
+
+.wrap-contenido .column.opciones .titulo h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrap-contenido .column.opciones .titulo h3 {
+  text-align: center;
+  font-weight: 100;
+}
+
+.wrap-contenido .column.opciones .titulo p {
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.btn.negro {
+  background: #111111;
+}
+
+.form-group label {
+  font-size: 0.7em;
+  font-weight: bold;
+}

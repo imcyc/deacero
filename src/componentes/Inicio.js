@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button'
 import { Link } from "react-router-dom";
 import logo from '../images/logo.svg';
 import logoimcyc from '../images/logo-imcyc.svg';
@@ -17,8 +16,8 @@ const Inicio = () => {
               <p>APP DE LOSAS PARA VIVIENDA</p>
             </div>
             <form>
-              <input type="text" id="login" className="fadeIn second" name="login" placeholder="USUARIO"/>
-              <input type="text" id="password" className="fadeIn third" name="login" placeholder="CONTRASEÑA"/>
+              <input type="text" id="login" className="fadeIn second" name="login" placeholder="USUARIO" required/>
+              <input type="text" id="password" className="fadeIn third" name="login" placeholder="CONTRASEÑA" required/>
               <Link to="/dashboard" className="btn fadeIn fourth" >INGRESAR A SU CUENTA</Link>
             </form>
             <div id="formFooter">
