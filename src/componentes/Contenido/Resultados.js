@@ -3,6 +3,15 @@ import data from "../../data";
 
 const Resultados = (props) => {
   const {area, destino, longitud, concretoPrecio, mallaPrecio, tipo} = props;
+  data.tipo.map(dato => {
+    if(tipo === dato.nombre){
+      if(parseFloat(longitud) === dato.datos.longitud && destino === dato.datos.destino){
+        console.log(dato.datos.precio);
+      }
+    }else{
+      console.log('naranjas');
+    }
+  })
   return (
     <div className="Resultados">
       <h1><i className="material-icons">keyboard_arrow_right</i> RESULTADOS</h1>
@@ -22,17 +31,12 @@ const Resultados = (props) => {
         </div>
         <div>
           <h2><i className="material-icons">keyboard_arrow_right</i> Longitud:</h2>
-          <p>{longitud}</p>
+          <p>{longitud} Mts.</p>
           <h2><i className="material-icons">keyboard_arrow_right</i> Tipo de Malla:</h2>
           <p>{tipo}</p>
         </div>
       </div>
       <hr/>
-      {
-        data.Experiences.map((experience, i) => (
-          <p>{experience.url}</p>
-        ))
-      }
     </div>
   );
 }

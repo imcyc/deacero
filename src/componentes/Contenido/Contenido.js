@@ -21,7 +21,8 @@ class Contenido extends Component {
       altura: 0,
       bkg: '#000000',
       visible: true,
-      valorBarra: ''
+      valorBarra: '',
+      factorGlobal: 1.2
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onFocus = this.onFocus.bind(this);
@@ -33,10 +34,6 @@ class Contenido extends Component {
       altura: this.destinoInput.offsetTop
     })
     this.nameInput.focus();
-  }
-  componentDidUpdate(){
-    var x = document.activeElement;
-    console.log(x);
   }
   handleSubmit(event) {
     event.preventDefault();
@@ -125,11 +122,11 @@ class Contenido extends Component {
                     onFocus={this.onFocus}
                     onChange={this.onChange}
                   >
-                    <option>3 Mts.</option>
-                    <option>3.5 Mts.</option>
-                    <option>4 Mts.</option>
-                    <option>4.5 Mts.</option>
-                    <option>5 Mts.</option>
+                    <option>3</option>
+                    <option>3.5</option>
+                    <option>4</option>
+                    <option>4.5</option>
+                    <option>5</option>
                   </Form.Control>
                 </Form.Group>
                 <Form.Row>
@@ -198,6 +195,7 @@ class Contenido extends Component {
                 concretoPrecio={this.state.concretoPrecio} 
                 mallaPrecio={this.state.mallaPrecio} 
                 tipo={this.state.tipo} 
+                factorGlobal={this.state.factorGlobal}
               />
             }
           </div>

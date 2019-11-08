@@ -62,6 +62,16 @@
 
 .btn.negro {
   background: #111111;
+  font-size: 0.9em;
+  border-radius: 20px;
+}
+
+.btn.negro .material-icons {
+  font-size: 1.5em;
+  padding-top: 1px;
+  position: relative;
+  float: right;
+  color: #FF2D00;
 }
 
 .form-group label {

@@ -1,18 +1,95 @@
 {
-  "Experiences": [
-    {
-      "companyName": "Demo1 Technologies",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
-      "url": "https://www.google.com/",
-      "roles": [
+  "tipo": 
+  [
         {
-        "title": "Full Stack Developer",
-        "description": "Built and updated various Chrome Extensions.",
-        "startDate": "2017-01-01",
-        "endDate": "2017-05-01",
-        "location": "New York, USA"
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 3,
+            "destino": "AZOTEA",
+            "espesor": 14,
+            "precio": 366.65
+          }
+        },
+        {
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 3,
+            "destino": "ENTREPISO",
+            "espesor": 14,
+            "precio": 374.35
+          }
+        },
+        {
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 3.5,
+            "destino": "AZOTEA",
+            "espesor": 15,
+            "precio": 380.16
+          }
+        },
+        {
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 3.5,
+            "destino": "ENTREPISO",
+            "espesor": 14,
+            "precio": 387.86
+          }
+        },
+        {
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 4,
+            "destino": "AZOTEA",
+            "espesor": 16,
+            "precio": 399.84
+          }
+        },
+        {
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 4,
+            "destino": "ENTREPISO",
+            "espesor": 16,
+            "precio": 407.54
+          }
+        },
+        {
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 4.5,
+            "destino": "AZOTEA",
+            "espesor": 18,
+            "precio": 437.55
+          }
+        },
+        {
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 4.5,
+            "destino": "ENTREPISO",
+            "espesor": 18,
+            "precio": 445.25
+          }
+        },
+        {
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 5,
+            "destino": "AZOTEA",
+            "espesor": 20,
+            "precio": 473.26
+          }
+        },
+        {
+          "nombre": "VIG-BOV Alma Abierta",
+          "datos": {
+            "longitud": 5,
+            "destino": "ENTREPISO",
+            "espesor": 20,
+            "precio": 480.96
+          }
         }
-      ]
-    }
   ]
 }
