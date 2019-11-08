@@ -220,3 +220,7 @@ p.small {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
+#formContent {
+  border-radius: 0;
+}

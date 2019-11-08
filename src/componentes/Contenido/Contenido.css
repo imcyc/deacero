@@ -34,7 +34,6 @@
 }
 
 .wrap-contenido .column.resultados {
-  background: #111111 !important;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -68,4 +67,31 @@
 .form-group label {
   font-size: 0.7em;
   font-weight: bold;
+}
+
+.Notificaciones {
+  position: absolute;
+  left: 50%;
+  background: #FF2D00;
+  transition: all 1s;
+  width: 15em;
+  padding-top: 5px;
+  padding-left: 5px;
+  box-shadow: 0 0 10px #000;
+  transition: all 1s;
+}
+
+.Notificaciones p {
+  color: #FFFFFF;
+  padding-left: 50px;
+  padding-top: 7px;
+}
+
+.Notificaciones .material-icons {
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 6px;
+  left: 0;
 }

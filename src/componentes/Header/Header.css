@@ -2,3 +2,12 @@ a.navbar-brand {
   width: 180px;
   display: block;
 }
+
+input {
+  background: #ddd !important;
+  text-align: left !important;
+}
+
+.material-icons {
+  font-size: 14px;
+}

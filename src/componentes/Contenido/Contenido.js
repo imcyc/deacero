@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Notificaciones from './Notificaciones';
+import Resultados from './Resultados';
 import './Contenido.css';
 
 class Contenido extends Component {
@@ -14,9 +16,26 @@ class Contenido extends Component {
       longitud: 0,
       concretoPrecio: 0,
       mallaPrecio: 0,
-      tipo: ''
+      tipo: '',
+      nombre: '',
+      altura: 0,
+      bkg: '#000000',
+      visible: true
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+  }
+  
+  componentDidMount(){
+    
+    this.setState({
+      altura: this.destinoInput.offsetTop
+    })
+    this.nameInput.focus();
+  }
+  componentDidUpdate(){
+    var x = document.activeElement;
+    console.log(x);
   }
   handleSubmit(event) {
     event.preventDefault();
@@ -26,8 +45,26 @@ class Contenido extends Component {
       longitud: event.target.longitud.value,
       concretoPrecio: event.target.concretoPrecio.value,
       mallaPrecio: event.target.mallaPrecio.value,
-      tipo: event.target.tipo.value
+      tipo: event.target.tipo.value,
+      bkg: '#f2f2f2',
+      visible: false
     });
+  }
+  onFocus(event) {
+    let nombre = event.target.name;
+    let alturax = event.target.offsetTop - 13;
+    if(nombre === 'tipo' || nombre === 'concretoPrecio' || nombre === 'mallaPrecio'){
+      this.setState({
+        nombre: nombre,
+        altura: alturax + this.state.altura
+      })
+      console.log('alturaxaxa' + this.state.altura);
+    } else {
+      this.setState({
+        nombre: nombre,
+        altura: alturax
+      })
+    }
   }
   render() { 
     return (
@@ -41,18 +78,36 @@ class Contenido extends Component {
               <Form onSubmit={this.handleSubmit}>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label><i className="material-icons">keyboard_arrow_right</i> Área en Mts<sup>2</sup>.:</Form.Label>
-                  <Form.Control type="number" name="area" placeholder="Ingrese el tamaño del área a calcular en Metros Cuadrados" />
+                  <Form.Control 
+                    type="number" 
+                    name="area" 
+                    placeholder="Ingrese el tamaño del área a calcular en Metros Cuadrados" 
+                    ref={(input) => { this.nameInput = input; }}
+                    onFocus={this.onFocus}
+                  />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect1">
                   <Form.Label><i className="material-icons">keyboard_arrow_right</i> Destino:</Form.Label>
-                  <Form.Control name="destino" as="select">
+                  <Form.Control 
+                    name="destino" 
+                    as="select"
+                    onFocus={this.onFocus}
+                  >
                     <option>AZOTEA</option>
                     <option>ENTREPISO</option>
                   </Form.Control>
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlSelect2">
+                <Form.Group 
+                  controlId="exampleForm.ControlSelect2"
+                  
+                >
                   <Form.Label><i className="material-icons">keyboard_arrow_right</i> Longitud del claro:</Form.Label>
-                  <Form.Control name="longitud" as="select">
+                  <Form.Control 
+                    name="longitud" 
+                    as="select"
+                    ref={(input) => { this.destinoInput = input; }}
+                    onFocus={this.onFocus}
+                  >
                     <option>3 Mts.</option>
                     <option>3.5 Mts.</option>
                     <option>4 Mts.</option>
@@ -64,19 +119,33 @@ class Contenido extends Component {
                   <Col>
                     <Form.Group>
                       <Form.Label><i className="material-icons">keyboard_arrow_right</i> CONCRETO:</Form.Label>
-                      <Form.Control name="concretoPrecio" type="number" placeholder="Precio" />
+                      <Form.Control 
+                        name="concretoPrecio" 
+                        type="number" 
+                        placeholder="Precio"
+                        onFocus={this.onFocus} 
+                      />
                     </Form.Group>
                   </Col>
                   <Col>
                   <Form.Group>
                       <Form.Label><i className="material-icons">keyboard_arrow_right</i> MALLA SOLDADA:</Form.Label>
-                      <Form.Control name="mallaPrecio" type="number" placeholder="Precio" />
+                      <Form.Control 
+                        name="mallaPrecio" 
+                        type="number" 
+                        placeholder="Precio"
+                        onFocus={this.onFocus}
+                      />
                     </Form.Group>
                   </Col>
                   <Col>
                     <Form.Group controlId="exampleForm.ControlSelect2">
                       <Form.Label><i className="material-icons">keyboard_arrow_right</i> TIPO DE VARILLA:</Form.Label>
-                      <Form.Control name="tipo" as="select">
+                      <Form.Control 
+                        name="tipo" 
+                        as="select"
+                        onFocus={this.onFocus} 
+                      >
                         <option>VIG-BOV Alma Abierta</option>
                         <option>VIG-BOV Pretensada</option>
                         <option>LOSA SÓLIDA Y VAR. G42</option>
@@ -94,9 +163,12 @@ class Contenido extends Component {
             </div>
             
           </div>
-          <div className="column resultados">
-            <h1>RESULTADOS</h1>
-            <h2>AREA: {this.state.area}</h2>
+          <div className="column resultados" style={{background:this.state.bkg}}>
+            {this.state.visible ?
+              <Notificaciones altura={this.state.altura} nombre={this.state.nombre} />
+            :
+              <Resultados />
+            }
           </div>
         </section>
       </div>
