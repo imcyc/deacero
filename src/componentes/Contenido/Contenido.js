@@ -8,32 +8,51 @@ import './Contenido.css';
 class Contenido extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = {
+      area: 0,
+      destino: '',
+      longitud: 0,
+      concretoPrecio: 0,
+      mallaPrecio: 0,
+      tipo: ''
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    this.setState({
+      area: parseInt(event.target.area.value, 10),
+      destino: event.target.destino.value,
+      longitud: event.target.longitud.value,
+      concretoPrecio: event.target.concretoPrecio.value,
+      mallaPrecio: event.target.mallaPrecio.value,
+      tipo: event.target.tipo.value
+    });
   }
   render() { 
     return (
       <div className="wrap-contenido">
         <section>
-          <div class="column opciones">
+          <div className="column opciones">
             <div className="titulo">
               <h1>APP LOSAS PARA VIVIENDA</h1>
               <h3>LOSAS EN UNA DIRECCIÓN, SIMPLEMENTE APOYADAS</h3>
-              <p><i class="material-icons">location_searching</i> Por Favor ingrese los siguientes datos:</p>
-              <Form>
+              <p><i className="material-icons">location_searching</i> Por Favor ingrese los siguientes datos:</p>
+              <Form onSubmit={this.handleSubmit}>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Área:</Form.Label>
-                  <Form.Control type="number" placeholder="Ingrese el tamaño del área a calcular en Metros Cuadrados" required="required" />
+                  <Form.Label><i className="material-icons">keyboard_arrow_right</i> Área en Mts<sup>2</sup>.:</Form.Label>
+                  <Form.Control type="number" name="area" placeholder="Ingrese el tamaño del área a calcular en Metros Cuadrados" />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect1">
-                  <Form.Label>Destino:</Form.Label>
-                  <Form.Control as="select" required="required">
+                  <Form.Label><i className="material-icons">keyboard_arrow_right</i> Destino:</Form.Label>
+                  <Form.Control name="destino" as="select">
                     <option>AZOTEA</option>
                     <option>ENTREPISO</option>
                   </Form.Control>
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect2">
-                  <Form.Label>Longitud del claro:</Form.Label>
-                  <Form.Control as="select" required="required">
+                  <Form.Label><i className="material-icons">keyboard_arrow_right</i> Longitud del claro:</Form.Label>
+                  <Form.Control name="longitud" as="select">
                     <option>3 Mts.</option>
                     <option>3.5 Mts.</option>
                     <option>4 Mts.</option>
@@ -44,20 +63,20 @@ class Contenido extends Component {
                 <Form.Row>
                   <Col>
                     <Form.Group>
-                      <Form.Label>CONCRETO:</Form.Label>
-                      <Form.Control type="number" placeholder="$ Precio" required="required" />
+                      <Form.Label><i className="material-icons">keyboard_arrow_right</i> CONCRETO:</Form.Label>
+                      <Form.Control name="concretoPrecio" type="number" placeholder="Precio" />
                     </Form.Group>
                   </Col>
                   <Col>
                   <Form.Group>
-                      <Form.Label>MALLA SOLDADA:</Form.Label>
-                      <Form.Control type="number" placeholder="$ Precio" required="required" />
+                      <Form.Label><i className="material-icons">keyboard_arrow_right</i> MALLA SOLDADA:</Form.Label>
+                      <Form.Control name="mallaPrecio" type="number" placeholder="Precio" />
                     </Form.Group>
                   </Col>
                   <Col>
                     <Form.Group controlId="exampleForm.ControlSelect2">
-                      <Form.Label>TIPO DE VARILLA:</Form.Label>
-                      <Form.Control as="select" required="required">
+                      <Form.Label><i className="material-icons">keyboard_arrow_right</i> TIPO DE VARILLA:</Form.Label>
+                      <Form.Control name="tipo" as="select">
                         <option>VIG-BOV Alma Abierta</option>
                         <option>VIG-BOV Pretensada</option>
                         <option>LOSA SÓLIDA Y VAR. G42</option>
@@ -75,8 +94,9 @@ class Contenido extends Component {
             </div>
             
           </div>
-          <div class="column resultados">
+          <div className="column resultados">
             <h1>RESULTADOS</h1>
+            <h2>AREA: {this.state.area}</h2>
           </div>
         </section>
       </div>
