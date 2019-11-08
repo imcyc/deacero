@@ -67,7 +67,7 @@
 }
 
 .btn.negro .material-icons {
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding-top: 1px;
   position: relative;
   float: right;
@@ -125,17 +125,30 @@
   margin-top: -5px;
 }
 
-.Resultados .datos {
-  display: flex;
-  flex: 1;
+.Resultados .col {
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
-  justify-content: space-around;
 }
-
-.Resultados .datos h2 {
-  font-size: 1rem;
+.Resultados .row {
+  margin: 10px 0;
+  padding: 0 20px;
+}
+.Resultados .row.rex {
+  background: #cccccc;
+  padding: 10px 0;
+}
+.Resultados .row.rex.tit {
+  background: #000;
+}
+.Resultados .row h2 {
+  font-size: 0.7rem;
   font-weight: bold;
+}
+.Resultados .row.rex.tit h1 {
+  color: #ffffff;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.Resultados .row p {
+  font-size: 1.2rem;
+  text-align: center;
 }
