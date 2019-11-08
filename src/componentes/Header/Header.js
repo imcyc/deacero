@@ -33,12 +33,15 @@ const Header = () => {
           </NavDropdown>
           */}
         </Nav>
-          
+        
         <Form inline>
+          {/*
           <FormControl type="text" placeholder="Buscar" className="mr-sm-2" />
           <Button variant="outline-success" style={{borderRadius: '50%'}}><i className="material-icons">youtube_searched_for</i></Button>
+          */}
           <Link to="/" className="btn ml-2">SALIR</Link>
         </Form>
+        
       </Navbar.Collapse>
     </Navbar>
   );

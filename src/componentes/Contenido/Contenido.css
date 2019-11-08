@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
 }
-
+/*
 .wrap-contenido .column.resultados {
   display: flex;
   flex: 1;
@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
 }
-
+*/
 .wrap-contenido .column.opciones .titulo {
   flex-direction: column;
 }
@@ -74,7 +74,7 @@
   left: 50%;
   background: #FF2D00;
   transition: all 1s;
-  width: 15em;
+  width: 18em;
   padding-top: 5px;
   padding-left: 5px;
   box-shadow: 0 0 10px #000;
@@ -94,4 +94,38 @@
   position: absolute;
   top: 6px;
   left: 0;
+}
+
+.Resultados {
+  transition: all 1s;
+  color: #333333;
+}
+
+.Resultados h1 {
+  font-weight: 100;
+}
+
+.Resultados h1 .material-icons {
+  font-size: 1.5em;
+  position: relative;
+  float: left;
+  left: 0px;
+  top: 0px;
+  margin: 0;
+  margin-top: -5px;
+}
+
+.Resultados .datos {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.Resultados .datos h2 {
+  font-size: 1rem;
+  font-weight: bold;
 }

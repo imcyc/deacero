@@ -20,14 +20,15 @@ class Contenido extends Component {
       nombre: '',
       altura: 0,
       bkg: '#000000',
-      visible: true
+      visible: true,
+      valorBarra: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onFocus = this.onFocus.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
   
   componentDidMount(){
-    
     this.setState({
       altura: this.destinoInput.offsetTop
     })
@@ -56,15 +57,28 @@ class Contenido extends Component {
     if(nombre === 'tipo' || nombre === 'concretoPrecio' || nombre === 'mallaPrecio'){
       this.setState({
         nombre: nombre,
-        altura: alturax + this.state.altura
+        altura: alturax + this.state.altura,
+        valorBarra: ''
       })
-      console.log('alturaxaxa' + this.state.altura);
     } else {
       this.setState({
         nombre: nombre,
-        altura: alturax
+        altura: alturax,
+        valorBarra: ''
       })
     }
+  }
+  onChange(event) {
+    let nombre = event.target.name;
+    let valorBarrax = event.target.value.toString();
+    if(nombre === "area"){
+      valorBarrax = event.target.value.toString() + " Mts";
+    } else if(nombre === "concretoPrecio" || nombre === "mallaPrecio") {
+      valorBarrax = "$ " + event.target.value.toString() + ".00 MXN";
+    }
+    this.setState({
+      valorBarra: valorBarrax
+    })
   }
   render() { 
     return (
@@ -72,7 +86,7 @@ class Contenido extends Component {
         <section>
           <div className="column opciones">
             <div className="titulo">
-              <h1>APP LOSAS PARA VIVIENDA</h1>
+              <h1>LOSAS PARA VIVIENDA</h1>
               <h3>LOSAS EN UNA DIRECCIÓN, SIMPLEMENTE APOYADAS</h3>
               <p><i className="material-icons">location_searching</i> Por Favor ingrese los siguientes datos:</p>
               <Form onSubmit={this.handleSubmit}>
@@ -84,6 +98,7 @@ class Contenido extends Component {
                     placeholder="Ingrese el tamaño del área a calcular en Metros Cuadrados" 
                     ref={(input) => { this.nameInput = input; }}
                     onFocus={this.onFocus}
+                    onChange={this.onChange}
                   />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect1">
@@ -92,6 +107,7 @@ class Contenido extends Component {
                     name="destino" 
                     as="select"
                     onFocus={this.onFocus}
+                    onChange={this.onChange}
                   >
                     <option>AZOTEA</option>
                     <option>ENTREPISO</option>
@@ -107,6 +123,7 @@ class Contenido extends Component {
                     as="select"
                     ref={(input) => { this.destinoInput = input; }}
                     onFocus={this.onFocus}
+                    onChange={this.onChange}
                   >
                     <option>3 Mts.</option>
                     <option>3.5 Mts.</option>
@@ -123,7 +140,8 @@ class Contenido extends Component {
                         name="concretoPrecio" 
                         type="number" 
                         placeholder="Precio"
-                        onFocus={this.onFocus} 
+                        onFocus={this.onFocus}
+                        onChange={this.onChange}
                       />
                     </Form.Group>
                   </Col>
@@ -135,6 +153,7 @@ class Contenido extends Component {
                         type="number" 
                         placeholder="Precio"
                         onFocus={this.onFocus}
+                        onChange={this.onChange}
                       />
                     </Form.Group>
                   </Col>
@@ -144,7 +163,8 @@ class Contenido extends Component {
                       <Form.Control 
                         name="tipo" 
                         as="select"
-                        onFocus={this.onFocus} 
+                        onFocus={this.onFocus}
+                        onChange={this.onChange}
                       >
                         <option>VIG-BOV Alma Abierta</option>
                         <option>VIG-BOV Pretensada</option>
@@ -156,7 +176,7 @@ class Contenido extends Component {
                 </Form.Row>
                 <Form.Group as={Row}>
                   <Col>
-                    <Button type="submit" className="btn negro" style={{float:'right'}}>CALCULAR RESULTADOS</Button>
+                    <Button type="submit" className="btn negro" style={{float:'right'}}>CALCULAR RESULTADOS <i className="material-icons">keyboard_arrow_right</i></Button>
                   </Col>
                 </Form.Group>
               </Form>
@@ -165,9 +185,20 @@ class Contenido extends Component {
           </div>
           <div className="column resultados" style={{background:this.state.bkg}}>
             {this.state.visible ?
-              <Notificaciones altura={this.state.altura} nombre={this.state.nombre} />
+              <Notificaciones 
+                altura={this.state.altura} 
+                nombre={this.state.nombre} 
+                valorBarra={this.state.valorBarra} 
+              />
             :
-              <Resultados />
+              <Resultados
+                area={this.state.area} 
+                destino={this.state.destino} 
+                longitud={this.state.longitud} 
+                concretoPrecio={this.state.concretoPrecio} 
+                mallaPrecio={this.state.mallaPrecio} 
+                tipo={this.state.tipo} 
+              />
             }
           </div>
         </section>
