@@ -180,6 +180,15 @@
         "espesor": 20,
         "precio": 480.96
       }
+    },
+    {
+      "nombre": "VIG-BOV Alma Abierta",
+      "datos": {
+        "longitud": 5,
+        "destino": "ENTREPISO",
+        "espesor": 20,
+        "precio": 480.96
+      }
     }
   ]
 }
