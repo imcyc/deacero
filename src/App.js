@@ -1,15 +1,17 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { HashRouter, BrowserRouter as Router, Route } from "react-router-dom";
 import Inicio from './componentes/Inicio';
 import Dashboard from './componentes/Dashboard';
 import './App.css';
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={Inicio} />
-      <Route exact path="/dashboard" component={Dashboard} />
-    </Switch>
+    <HashRouter basename='/'>
+      <Router basename={process.env.PUBLIC_URL}>
+        <Route exact path="/" component={Inicio} />
+        <Route exact path="/dashboard" component={Dashboard} />
+      </Router>
+    </HashRouter>
   );
 }
 
