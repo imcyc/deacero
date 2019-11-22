@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename='/'>
       <Switch>
         <Route exact path="/" component={Inicio} />
         <Route exact path="/dashboard" component={Dashboard} />
