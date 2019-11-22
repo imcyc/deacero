@@ -57,11 +57,11 @@ const Resultados = (props) => {
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Costo:</h2>
-          <p>$ {costo.toFixed(2)} por M<sup>2</sup></p>
+          <p>$ {costo} por M<sup>2</sup></p>
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Costo Total:</h2>
-          <p>$ {costoTotal.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+          <p>$ {costoTotal}</p>
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Cimbrado:</h2>
@@ -85,11 +85,11 @@ const Resultados = (props) => {
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Costo:</h2>
-          <p>$ {costo.toFixed(2)} por M<sup>2</sup></p>
+          <p>$ {costo} por M<sup>2</sup></p>
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Costo Total:</h2>
-          <p>$ {costoTotal.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+          <p>$ {costoTotal}</p>
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Cimbrado:</h2>
@@ -113,11 +113,11 @@ const Resultados = (props) => {
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Costo:</h2>
-          <p>$ {costo.toFixed(2)} por M<sup>2</sup></p>
+          <p>$ {costo} por M<sup>2</sup></p>
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Costo Total:</h2>
-          <p>$ {costoTotal.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+          <p>$ {costoTotal}</p>
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Cimbrado:</h2>
@@ -141,11 +141,11 @@ const Resultados = (props) => {
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Costo:</h2>
-          <p>$ {costo.toFixed(2)} por M<sup>2</sup></p>
+          <p>$ {costo} por M<sup>2</sup></p>
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Costo Total:</h2>
-          <p>$ {costoTotal.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+          <p>$ {costoTotal}</p>
         </Col>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Cimbrado:</h2>
