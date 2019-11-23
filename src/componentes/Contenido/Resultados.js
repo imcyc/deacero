@@ -6,13 +6,14 @@ import data from "../../data";
 const Resultados = (props) => {
   const {area, destino, longitud, concretoPrecio, mallaPrecio, tipo, factorGlobal} = props;
   let costo, espesor, costoTotal;
+  console.log("el tipo: " + tipo);
   data.tipo.map(dato => {
     if(tipo === dato.nombre){
       if(parseFloat(longitud) === dato.datos.longitud && destino === dato.datos.destino){
         console.log(dato.datos.precio);
-        costo = dato.datos.precio * factorGlobal;
+        costo = (dato.datos.precio * factorGlobal).toFixed(2);
         espesor = dato.datos.espesor;
-        costoTotal = costo * area;
+        costoTotal = (costo * area).toFixed(2);
       }
     }else{
       console.log('naranjas');
@@ -22,7 +23,7 @@ const Resultados = (props) => {
     <div className="Resultados">
       <h1><i className="material-icons">keyboard_arrow_right</i> RESULTADOS</h1>
       <hr/>
-      {/*
+      
       <Row>
         <Col>
           <h2><i className="material-icons">keyboard_arrow_right</i> Área en Mts<sup>2</sup>:</h2>
@@ -44,7 +45,7 @@ const Resultados = (props) => {
         </Col>
       </Row>
       <hr/>
-      */}
+      
       <Row className="rex tit">
         <Col>
           <h1><i className="material-icons">keyboard_arrow_right</i> VIG-BOV Alma Abierta</h1>

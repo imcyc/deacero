@@ -189,6 +189,96 @@
         "espesor": 20,
         "precio": 480.96
       }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 3,
+        "destino": "AZOTEA",
+        "espesor": 14,
+        "precio": 374.24
+      }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 3,
+        "destino": "ENTREPISO",
+        "espesor": 14,
+        "precio": 381.94
+      }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 3.5,
+        "destino": "AZOTEA",
+        "espesor": 15,
+        "precio": 392.27
+      }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 3.5,
+        "destino": "ENTREPISO",
+        "espesor": 15,
+        "precio": 399.97
+      }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 4,
+        "destino": "AZOTEA",
+        "espesor": 16,
+        "precio": 420.42
+      }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 4,
+        "destino": "ENTREPISO",
+        "espesor": 16,
+        "precio": 328.12
+      }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 4.5,
+        "destino": "AZOTEA",
+        "espesor": 18,
+        "precio": 466.59
+      }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 4.5,
+        "destino": "ENTREPISO",
+        "espesor": 18,
+        "precio": 474.29
+      }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 5,
+        "destino": "AZOTEA",
+        "espesor": 20,
+        "precio": 488.43
+      }
+    },
+    {
+      "nombre": "VIG-BOV Pretensada",
+      "datos": {
+        "longitud": 5,
+        "destino": "ENTREPISO",
+        "espesor": 20,
+        "precio": 496.13
+      }
     }
   ]
 }

@@ -5,10 +5,11 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Notificaciones from './Notificaciones';
 import Resultados from './Resultados';
-import bkgI from '../../images/bkg.jpg';
+import bkgI from '../../images/bkg.jpeg';
 import bkgI1 from '../../images/bkg2.jpeg';
 import bkgI2 from '../../images/bkg3.jpeg';
 import bkgI3 from '../../images/bkg4.jpeg';
+import bkgI4 from '../../images/bkg5.jpeg';
 import './Contenido.css';
 
 class Contenido extends Component {
@@ -52,6 +53,7 @@ class Contenido extends Component {
       bkg: "f2f2f2",
       visible: false
     });
+    window.scroll({top: 0, left: 0, behavior: 'smooth' });
   }
   onFocus(event) {
     let nombre = event.target.name;
@@ -76,16 +78,20 @@ class Contenido extends Component {
     if(nombre === "area"){
       valorBarrax = event.target.value.toString() + " Mts";
       this.setState({
-        bkg: bkgI3
+        bkg: bkgI
       })
     } else if(nombre === "concretoPrecio" || nombre === "mallaPrecio") {
       valorBarrax = "$ " + event.target.value.toString() + ".00 MXN";
       this.setState({
-        bkg: bkgI1
+        bkg: bkgI
+      })
+    } else if(nombre === "longitud"){
+      this.setState({
+        bkg: bkgI
       })
     } else if(nombre === "destino"){
       this.setState({
-        bkg: bkgI2
+        bkg: bkgI
       })
     }
     this.setState({
@@ -181,17 +187,17 @@ class Contenido extends Component {
                         onFocus={this.onFocus}
                         onChange={this.onChange}
                       >
-                        <option>VIG-BOV Alma Abierta</option>
-                        <option>VIG-BOV Pretensada</option>
-                        <option>LOSA SÓLIDA Y VAR. G42</option>
-                        <option>LOSA ALIGERADA Y VAR. G42</option>
+                        <option value="VIG-BOV Alma Abierta">VIG-BOV Alma Abierta</option>
+                        <option value="VIG-BOV Pretensada">VIG-BOV Pretensada</option>
+                        <option value="LOSA SÓLIDA Y VAR. G42">LOSA SÓLIDA Y VAR. G42</option>
+                        <option value="LOSA ALIGERADA Y VAR. G42">LOSA ALIGERADA Y VAR. G42</option>
                       </Form.Control>
                     </Form.Group>
                   </Col>
                 </Form.Row>
                 <Form.Group as={Row}>
                   <Col>
-                    <Button type="submit" className="btn negro" style={{float:'right'}}>CALCULAR RESULTADOS <i className="material-icons">keyboard_arrow_right</i></Button>
+                    <Button type="submit" className="btn negro" style={{float:'right',width:'100%'}}>CALCULAR RESULTADOS <i className="material-icons">keyboard_arrow_right</i></Button>
                   </Col>
                 </Form.Group>
               </Form>
