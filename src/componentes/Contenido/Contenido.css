@@ -109,6 +109,11 @@
 .Resultados {
   transition: all 1s;
   color: #333333;
+  
+}
+
+.column.resultados {
+  background-size: cover !important;
 }
 
 .Resultados h1 {

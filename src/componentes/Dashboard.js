@@ -4,7 +4,7 @@ import Contenido from './Contenido/Contenido';
 import Footer from './Footer/Footer';
 
 class Dashboard extends Component {
-  state = {  }
+  state = {}
   render() { 
     return (
       <div>

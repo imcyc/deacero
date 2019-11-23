@@ -5,6 +5,10 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Notificaciones from './Notificaciones';
 import Resultados from './Resultados';
+import bkgI from '../../images/bkg.jpg';
+import bkgI1 from '../../images/bkg2.jpeg';
+import bkgI2 from '../../images/bkg3.jpeg';
+import bkgI3 from '../../images/bkg4.jpeg';
 import './Contenido.css';
 
 class Contenido extends Component {
@@ -19,10 +23,11 @@ class Contenido extends Component {
       tipo: '',
       nombre: '',
       altura: 0,
-      bkg: '#000000',
+      bkg: bkgI,
       visible: true,
       valorBarra: '',
-      factorGlobal: 1.2
+      factorGlobal: 1.2,
+      fondoResultados: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onFocus = this.onFocus.bind(this);
@@ -44,7 +49,7 @@ class Contenido extends Component {
       concretoPrecio: event.target.concretoPrecio.value,
       mallaPrecio: event.target.mallaPrecio.value,
       tipo: event.target.tipo.value,
-      bkg: '#f2f2f2',
+      bkg: "f2f2f2",
       visible: false
     });
   }
@@ -70,8 +75,18 @@ class Contenido extends Component {
     let valorBarrax = event.target.value.toString();
     if(nombre === "area"){
       valorBarrax = event.target.value.toString() + " Mts";
+      this.setState({
+        bkg: bkgI3
+      })
     } else if(nombre === "concretoPrecio" || nombre === "mallaPrecio") {
       valorBarrax = "$ " + event.target.value.toString() + ".00 MXN";
+      this.setState({
+        bkg: bkgI1
+      })
+    } else if(nombre === "destino"){
+      this.setState({
+        bkg: bkgI2
+      })
     }
     this.setState({
       valorBarra: valorBarrax
@@ -96,6 +111,7 @@ class Contenido extends Component {
                     ref={(input) => { this.nameInput = input; }}
                     onFocus={this.onFocus}
                     onChange={this.onChange}
+                    required={true}
                   />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect1">
@@ -139,6 +155,7 @@ class Contenido extends Component {
                         placeholder="Precio"
                         onFocus={this.onFocus}
                         onChange={this.onChange}
+                        required={true}
                       />
                     </Form.Group>
                   </Col>
@@ -151,6 +168,7 @@ class Contenido extends Component {
                         placeholder="Precio"
                         onFocus={this.onFocus}
                         onChange={this.onChange}
+                        required={true}
                       />
                     </Form.Group>
                   </Col>
@@ -180,7 +198,7 @@ class Contenido extends Component {
             </div>
             
           </div>
-          <div className="column resultados" style={{background:this.state.bkg}}>
+          <div className="column resultados" style={{ backgroundSize: 'cover',background:`url(${this.state.bkg})`}}>
             {this.state.visible ?
               <Notificaciones 
                 altura={this.state.altura} 
