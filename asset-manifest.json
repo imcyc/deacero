@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/deacero/static/css/main.bdaba9bd.chunk.css",
-    "main.js": "/deacero/static/js/main.0518844e.chunk.js",
-    "main.js.map": "/deacero/static/js/main.0518844e.chunk.js.map",
+    "main.css": "/deacero/static/css/main.c2717cf5.chunk.css",
+    "main.js": "/deacero/static/js/main.6b224d23.chunk.js",
+    "main.js.map": "/deacero/static/js/main.6b224d23.chunk.js.map",
     "runtime-main.js": "/deacero/static/js/runtime-main.fdf8e765.js",
     "runtime-main.js.map": "/deacero/static/js/runtime-main.fdf8e765.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "/deacero/static/css/2.b0bb7f2c.chunk.css",
     "static/js/2.cf1d8f8a.chunk.js": "/deacero/static/js/2.cf1d8f8a.chunk.js",
     "static/js/2.cf1d8f8a.chunk.js.map": "/deacero/static/js/2.cf1d8f8a.chunk.js.map",
     "index.html": "/deacero/index.html",
-    "precache-manifest.8373f65434625b4a6cb85670e393757a.js": "/deacero/precache-manifest.8373f65434625b4a6cb85670e393757a.js",
+    "precache-manifest.6a16ad3c981ec2918a1d3568c65d1323.js": "/deacero/precache-manifest.6a16ad3c981ec2918a1d3568c65d1323.js",
     "service-worker.js": "/deacero/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/deacero/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.bdaba9bd.chunk.css.map": "/deacero/static/css/main.bdaba9bd.chunk.css.map",
+    "static/css/main.c2717cf5.chunk.css.map": "/deacero/static/css/main.c2717cf5.chunk.css.map",
     "static/media/bkg.jpeg": "/deacero/static/media/bkg.554fe1c4.jpeg",
     "static/media/bkg2.jpeg": "/deacero/static/media/bkg2.8b915b3a.jpeg",
     "static/media/bkg3.jpeg": "/deacero/static/media/bkg3.7c585905.jpeg",
@@ -26,7 +26,7 @@
     "static/js/runtime-main.fdf8e765.js",
     "static/css/2.b0bb7f2c.chunk.css",
     "static/js/2.cf1d8f8a.chunk.js",
-    "static/css/main.bdaba9bd.chunk.css",
-    "static/js/main.0518844e.chunk.js"
+    "static/css/main.c2717cf5.chunk.css",
+    "static/js/main.6b224d23.chunk.js"
   ]
 }
