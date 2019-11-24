@@ -197,7 +197,7 @@ class Contenido extends Component {
                 </Form.Row>
                 <Form.Group as={Row}>
                   <Col>
-                    <Button type="submit" className="btn negro" style={{float:'right',width:'100%'}}>CALCULAR RESULTADOS <i className="material-icons">keyboard_arrow_right</i></Button>
+                    <Button type="submit" className="btn negro" style={{float:'right',width:'100%',borderRadius: '10px'}}>CALCULAR RESULTADOS <i className="material-icons">keyboard_arrow_right</i></Button>
                   </Col>
                 </Form.Group>
               </Form>

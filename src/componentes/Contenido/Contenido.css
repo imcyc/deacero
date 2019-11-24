@@ -29,7 +29,6 @@
   display: flex;
   flex: 1;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
 }
 /*
@@ -89,12 +88,13 @@
   padding-left: 5px;
   box-shadow: 0 0 10px #000;
   transition: all 1s;
+  border-radius: 20px;
 }
 
 .Notificaciones p {
   color: #FFFFFF;
   padding-left: 50px;
-  padding-top: 7px;
+  padding-top: 10px;
 }
 
 .Notificaciones .material-icons {
@@ -102,8 +102,8 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 6px;
   left: 0;
+  top:12px;
 }
 
 .Resultados {
